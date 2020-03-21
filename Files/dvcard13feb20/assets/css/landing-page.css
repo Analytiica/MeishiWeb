@@ -1,0 +1,196 @@
+.inline-block{
+    display: inline-block;
+}
+.leftNavText{
+
+}
+.firstNamesLanding{
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 45px;
+    letter-spacing: 1px;
+    margin-bottom: 20px !important;
+}
+
+.lastNameLanding{
+    padding-top: 5px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 33px;
+    font-weight: 500;
+}
+.lastNameLanding:before {
+    position: absolute;
+    top: 0px;
+    left: 33%;
+    width: 35%;
+    height: 2px;
+    background: #fff;
+    content: '';
+}
+.positionLanding{
+    letter-spacing: 1px;
+}
+.rightNavText{
+
+}
+.white-text{
+    color: #ffffff;
+}
+.hvr-sweep-to-left:visited{
+    color: #ffffff !important;
+}
+.footer-poweredBy-link{
+
+}
+.footer-poweredBy{
+
+}
+
+
+/*editor styling*/
+.customCog{
+    font-size: 22px !important;
+    color: white;
+    margin-left: -4px;
+    position: absolute;
+    margin-top: -33px;
+    cursor: pointer;
+}
+.lastnameLb, .firstnameslb{
+    display: inline-block;
+}
+/*#firstnameEditor, #lastnameEditor{*/
+.editors{
+    background-color: black;
+    color: white;
+    /*display: inline-block;*/
+    display: none;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: left;
+    z-index: 9999999956999;
+}
+.editorCard_item{
+    margin-bottom: 10px;
+}
+#FNFontSizeChange{
+
+}
+.editorSubmitButton{
+    height: 50px;
+    font-size: 20px;
+}
+.editorbgColorSubmitButton{
+    height: 50px;
+    font-size: 20px;
+}
+.specialLastNameEditorSubmitButton{
+    height: 50px;
+    font-size: 20px;
+}
+.editorCancelButton{
+    margin-left: 5px;
+    height: 50px;
+    font-size: 20px;
+}
+.editorColor{
+    width: 70px;
+}
+.editorFontSize{
+    width: 70px;
+}
+.font-style-selector{
+    text-align: left;
+
+}
+#firstNameTrigger{
+    margin-left: 0px;
+}
+#firstNameEditor{
+    margin-top: 40px;
+}
+#lastNameTrigger{
+    margin-left: 0px;
+}
+#lastNameEditor{
+    margin-top: 44px;
+}
+#jobTitleTrigger{
+    margin-left: 0px;
+}
+#jobTitleEditor{
+    margin-top: -125px;
+    margin-left: 30px;
+}
+.landingBackgroundCogPostion{
+    bottom: 30%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.landingBackgroundText{
+    font-size: 20px;
+}
+#landingBackgroundEditor{
+    margin-left: 25px;
+    margin-top: -50px;
+}
+
+.ui-textinput  , .editorCard_item .ui-textinput input[type=text] {
+    color: black;
+}
+.ui-textinput input[type=number]{
+    width: 80px;
+    height: 20px;
+}
+.ui-textinput{
+    margin-top: 10px;
+}
+
+.ui-selectmenu-button-text{
+    display: none;
+}
+
+.font-style-selector{
+    color: black;
+    width: 100%;
+}
+
+#landingBackgroundEditor .editorCard_item .ui-textinput input[type=color] , .editorCard_item .ui-textinput input[type=color]{
+    /*padding-top: 2px;*/
+    /*padding-left: 5px;*/
+    /*padding-right: 5px;*/
+    /*padding-bottom: 0px;*/
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    height: 40px;
+    width: 40px;
+    width: 80px;
+}
+.landingAboutPostion{
+    top: 44%;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    left: 50px;
+}
+.landingServicePosition{
+    top: 44%;
+    position: absolute;
+    text-align: right;
+    width: 100%;
+    right: 50px;
+}
+#landingServiceEditor{
+    margin-left: -284px;
+}

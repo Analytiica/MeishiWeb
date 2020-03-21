@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<!--    <div class="col-sm-6 form-control">-->
+<!--        <div class="col-sm-4"><lable for="firstname" class="control-label">First name:</lable></div>-->
+<!--        <div class="col-sm-8 ">-->
+<!--            <input type="text" name="firstname" id="firstname">-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+<div class="container">
+    <ul class="nav nav-tabs" role="tablist" >
+        <li class="active"><div class="tabNavOverLay disabled"></div><a data-toggle="tab" href="#home">Home</a></li>
+        <li ><div class="tabNavOverLay disabled"></div><a data-toggle="tab" href="#menu1" class="tabDisable" >Menu 1</a></li>
+        <li ><div class="tabNavOverLay disabled"></div><a data-toggle="tab" href="#menu2" disabled="disable">Menu 2</a></li>
+        <li> <div class="tabNavOverLay disabled"></div><a data-toggle="tab" href="#menu3" disabled="disable">Menu 3</a></li>
+    </ul>
+
+    <form id="detailsForm" action="#"  method="post" target="_blank">
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <h3>HOME</h3>
+                <div class="form-row col-lg-8">
+                    <div class="form-group ">
+                        <label for="email" class="col-sm-4 input-label">Email address</label>
+                        <div class="col-sm-8 input-field">
+                            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailTip"
+                                   placeholder="Enter email" required>
+                            <small id="emailTip" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+
+                    </div>
+                    <div class="form-group ">
+                        <label for="firstName" class="col-sm-4 input-label">Name</label>
+                        <div class="col-sm-8 input-field">
+                            <input type="text" class="form-control" id="firstName" id="firstName" aria-describedby="firstNameHelp"
+                                   required
+                                   placeholder="Enter First Name">
+                            <small id="firstNameHelp" class="form-text text-muted">...</small>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12 next-button">
+                        <button id="homeTabButton" type="button" class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>
+
+<!--            tab 1 -->
+
+            <div id="menu1" class="tab-pane fade">
+                <h3>Menu 1</h3>
+                <div class="form-row col-lg-8">
+                    <div class="form-group ">
+                        <label for="lastName" class="col-sm-4 input-label">Last Name</label>
+                        <div class="col-sm-8 input-field">
+                            <input type="text" class="form-control" id="lastName"  name="lastName" aria-describedby="lastNameTip"
+                                   placeholder="Enter email" required>
+                            <small id="lastNameTip" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12 next-button">
+                        <button type="button" class="btn btn-danger tabBackButton">Back</button>
+                        <button id="secondTabButton" type="button" class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>
+
+<!--            tab 2-->
+
+            <div id="menu2" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <div class="form-row col-lg-8">
+                    <div class="form-group ">
+                        <label for="website" class="col-sm-4 input-label">website</label>
+                        <div class="col-sm-8 input-field">
+                            <input type="text" class="form-control" id="website" name="website" aria-describedby="websiteTip"
+                                   placeholder="Enter email" required>
+                            <small id="websiteTip" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-12 next-button">
+                        <button type="button" class="btn btn-danger tabBackButton">Back</button>
+                        <button id="thirdTabButton" type="button" class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>
+
+<!--            tab 3-->
+            <div id="menu3" class="tab-pane fade">
+                <h3>Menu 3</h3>
+                <div class="form-row col-lg-8">
+                    <div class="form-group ">
+                        <label for="jobTitle" class="col-sm-4 input-label">job Title</label>
+                        <div class="col-sm-8 input-field">
+                            <input type="text" class="form-control" id="jobTitle" name="jobTitle" aria-describedby="jobTitleTip"
+                                   placeholder="Enter email" required>
+                            <small id="jobTitleTip" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-12 next-button">
+                        <button type="button" class="btn btn-danger tabBackButton">Back</button>
+                        <button id="saveData" type="button" class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">save</button>
+    </form>
+</div>
+
+<script>
+    //<!---
+    // next buttons
+    $("#homeTabButton").on("click", function(){
+        // can add a validation for this section before executing the next statement
+        $('.nav-tabs > .active').next('li').find('a').trigger('click');
+    });
+    $("#secondTabButton").on("click", function(){
+        // can add a validation for this section before executing the next statement
+        $('.nav-tabs > .active').next('li').find('a').trigger('click');
+    });
+    $("#thirdTabButton").on("click", function(){
+        // can add a validation for this section before executing the next statement
+        $('.nav-tabs > .active').next('li').find('a').trigger('click');
+    });
+    // back buttons
+    $(".tabBackButton").on("click", function(){
+        $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+    });
+
+    //--->
+</script>
+<script type="application/javascript" src="./assets/js/tabService.js"></script>
+</body>
+</html>

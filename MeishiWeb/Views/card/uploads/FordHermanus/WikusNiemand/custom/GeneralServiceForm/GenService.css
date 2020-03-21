@@ -1,0 +1,28 @@
+.jumbotron	{
+
+	color: white;
+	background-color: #ffffff;
+	
+}
+
+.btn-primary {
+
+	color: white;
+	background-color: #003478;
+
+}
+
+.container {
+
+	width: 95%
+
+}
+
+img {
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	
+}

@@ -1,0 +1,134 @@
+.left-side-heading{
+
+}
+.left-side-profile {
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 1.5em;
+}
+.lef-side-description{
+
+}
+.call-back-button{
+
+}
+.contact-heading{
+
+}
+.contact-description{
+
+}
+.leftSideHeadingTrigger{
+    margin-right: 20px;
+}
+#leftSideHeadingEditor{
+    margin-top: 50px;
+    margin-left: -310px;
+}
+.leftSideRequestCallTrigger{
+    margin-right: 25px;
+    margin-top: 30px;
+}
+#leftSideRequestCallEditor{
+    margin-top: 30px;
+    margin-left: -310px;
+}
+.leftSideContactHeadingTrigger{
+    margin-right: 18px;
+}
+#leftSideContactHeadingEditor{
+    margin-left: -330px;
+    margin-top: 45px;
+}
+.leftSideContactDescriptionTrigger{
+    margin-right: 18px;
+}
+#leftSideContactDescriptionEditor{
+    margin-left: -330px;
+    margin-top: 45px;
+}
+.leftSideContactEmailTrigger{
+    margin-right: 20px;
+}
+#leftSideContactEmailEditor{
+    margin-left: -315px;
+}
+.leftSideContactMobileTrigger{
+    margin-right: 20px;
+}
+#leftSideContactMobileEditor{
+    margin-left: -315px;
+}
+.leftSideContactlandlineTrigger{
+    margin-right: 20px;
+}
+#leftSideContactLandlineEditor{
+    margin-left: -315px;
+}
+.leftSidesaveContactTrigger{
+    margin-right: 20px;
+}
+#leftSideSaveContactEditor{
+    margin-left: -315px;
+}
+.leftSidewhatsappShareTrigger{
+    margin-right: 20px;
+}
+#leftSideWhatsappShareEditor{
+    margin-left: -315px;
+}
+.leftSideSendButtonTrigger .customCog{
+    margin-top: -16px;
+}
+.leftSideSendButtonTrigger{
+    margin-right: 25px;
+}
+#leftSideSendButtonEditor{
+    margin-top: -50px;
+    margin-left: -340px;
+ }
+
+/*inputs*/
+.editorCard_item .ui-textinput{
+    height: 40px !important;
+}
+.editorColor .ui-textinput input[type=color]{
+    padding-top: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.intro-content .editorCard_item .ui-textinput input[type=text]{
+    /*padding-top: 8px;*/
+}
+
+.intro-content .editorCard_item .ui-textinput input[type=color]{
+    /*padding-top: 2px;*/
+    /*padding-left: 5px;*/
+    /*padding-right: 5px;*/
+    /*padding-bottom: 0px;*/
+}
+.editorCard_item .ui-textinput input[type=text]{
+    padding-top: 0px;
+}
+.editorCard_item .ui-selectmenu-button{
+    height: 40px;
+    padding-top: 7px;
+}
+.ui-selectmenu{
+    margin-bottom: 20px;
+}
+.uploadProfilePic input[type=file]{
+    color: white;
+}
+.uploadProfilePic , .rightlandingUploadBackground{
+    position: relative;
+    margin-bottom: 20px;
+}
+#leftSideProfilePicEditor{
+    margin-left: -330px;
+    margin-top: 45px;
+    width: 330px;
+}
+#uploadProfilePicButton{
+    height: 50px;
+}

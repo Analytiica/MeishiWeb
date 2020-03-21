@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CardModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="analytiics">
+          <Key>
+            <PropertyRef Name="DateCreated" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="ANAID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateCreated" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="area" Type="varchar(max)" />
+          <Property Name="name" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="count" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CardInfo">
+          <Key>
+            <PropertyRef Name="DetailID" />
+            <PropertyRef Name="CompanyID" />
+          </Key>
+          <Property Name="CardID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DetailID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="CompanyID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="StreetName" Type="nvarchar(max)" />
+          <Property Name="AddressLine" Type="nvarchar(max)" />
+          <Property Name="Province" Type="nvarchar(max)" />
+          <Property Name="PostalCode" Type="nvarchar(max)" />
+          <Property Name="Country" Type="nvarchar(max)" />
+          <Property Name="DisplayName" Type="nvarchar(max)" />
+          <Property Name="CompanyLogo" Type="nvarchar(max)" />
+          <Property Name="Company_moto" Type="nvarchar(max)" />
+          <Property Name="AgentName" Type="nvarchar(max)" />
+          <Property Name="Introduction" Type="nvarchar(max)" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="MiddleName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Alias" Type="nvarchar(max)" />
+          <Property Name="Bio" Type="nvarchar(max)" />
+          <Property Name="JobTitle" Type="nvarchar(max)" />
+          <Property Name="Location" Type="nvarchar(max)" />
+          <Property Name="ProfilePic" Type="nvarchar(max)" />
+          <Property Name="email" Type="nvarchar(max)" />
+          <Property Name="WebSite" Type="nvarchar(max)" />
+          <Property Name="Facebook" Type="nvarchar(max)" />
+          <Property Name="Instagram" Type="nvarchar(max)" />
+          <Property Name="Twitter" Type="nvarchar(max)" />
+          <Property Name="LinkedIn" Type="nvarchar(max)" />
+          <Property Name="YouTube" Type="nvarchar(max)" />
+          <Property Name="LandLineNumber" Type="nvarchar(max)" />
+          <Property Name="MobileNumber" Type="nvarchar(max)" />
+          <Property Name="FaxNumber" Type="nvarchar(max)" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="255" />
+          <Property Name="ActiveAccount" Type="varchar" MaxLength="100" />
+          <Property Name="CompanyBot" Type="varchar" MaxLength="100" />
+          <Property Name="PersonBot" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CardLinks">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+            <PropertyRef Name="CardID" />
+          </Key>
+          <Property Name="LinkID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompanyID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="CardID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Title1" Type="nvarchar(max)" />
+          <Property Name="LinkName1" Type="nvarchar(max)" />
+          <Property Name="Title2" Type="nvarchar(max)" />
+          <Property Name="LinkName2" Type="nvarchar(max)" />
+          <Property Name="Title3" Type="nvarchar(max)" />
+          <Property Name="LinkName3" Type="nvarchar(max)" />
+          <Property Name="Title4" Type="nvarchar(max)" />
+          <Property Name="LinkName4" Type="nvarchar(max)" />
+          <Property Name="Title5" Type="nvarchar(max)" />
+          <Property Name="LinkName5" Type="nvarchar(max)" />
+          <Property Name="Title6" Type="nvarchar(max)" />
+          <Property Name="LinkName6" Type="nvarchar(max)" />
+          <Property Name="Title7" Type="nvarchar(max)" />
+          <Property Name="LinkName7" Type="nvarchar(max)" />
+          <Property Name="Title8" Type="nvarchar(max)" />
+          <Property Name="LinkName8" Type="nvarchar(max)" />
+          <Property Name="Title9" Type="nvarchar(max)" />
+          <Property Name="LinkName9" Type="nvarchar(max)" />
+          <Property Name="Title10" Type="nvarchar(max)" />
+          <Property Name="LinkName10" Type="nvarchar(max)" />
+          <Property Name="Title11" Type="nvarchar(max)" />
+          <Property Name="LinkName11" Type="nvarchar(max)" />
+          <Property Name="Title12" Type="nvarchar(max)" />
+          <Property Name="LinkName12" Type="nvarchar(max)" />
+          <Property Name="Title13" Type="nvarchar(max)" />
+          <Property Name="LinkName13" Type="nvarchar(max)" />
+          <Property Name="Title14" Type="nvarchar(max)" />
+          <Property Name="LinkName14" Type="nvarchar(max)" />
+          <Property Name="Title15" Type="nvarchar(max)" />
+          <Property Name="LinkName15" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="CardModelStoreContainer">
+          <EntitySet Name="analytiics" EntityType="Self.analytiics" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CardInfo" EntityType="Self.CardInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CardLinks" EntityType="Self.CardLinks" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CardModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CardLink">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+            <PropertyRef Name="CardID" />
+          </Key>
+          <Property Name="LinkID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Title1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkName15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CardID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="CardDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CardLinks" EntityType="Self.CardLink" />
+          <EntitySet Name="analytiics" EntityType="CardModel.analytiic" />
+          <EntitySet Name="CardInfoes" EntityType="CardModel.CardInfo" />
+        </EntityContainer>
+        <EntityType Name="analytiic">
+          <Key>
+            <PropertyRef Name="DateCreated" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="ANAID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateCreated" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="area" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="count" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CardInfo">
+          <Key>
+            <PropertyRef Name="DetailID" />
+            <PropertyRef Name="CompanyID" />
+          </Key>
+          <Property Name="CardID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DetailID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="StreetName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLine" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Province" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyLogo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Company_moto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AgentName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Introduction" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Alias" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Bio" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="JobTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProfilePic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WebSite" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Facebook" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Instagram" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Twitter" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkedIn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YouTube" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LandLineNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FaxNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ActiveAccount" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyBot" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PersonBot" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CardModelStoreContainer" CdmEntityContainer="CardDBEntities">
+          <EntitySetMapping Name="CardLinks">
+            <EntityTypeMapping TypeName="CardModel.CardLink">
+              <MappingFragment StoreEntitySet="CardLinks">
+                <ScalarProperty Name="CardID" ColumnName="CardID" />
+                <ScalarProperty Name="LinkName15" ColumnName="LinkName15" />
+                <ScalarProperty Name="Title15" ColumnName="Title15" />
+                <ScalarProperty Name="LinkName14" ColumnName="LinkName14" />
+                <ScalarProperty Name="Title14" ColumnName="Title14" />
+                <ScalarProperty Name="LinkName13" ColumnName="LinkName13" />
+                <ScalarProperty Name="Title13" ColumnName="Title13" />
+                <ScalarProperty Name="LinkName12" ColumnName="LinkName12" />
+                <ScalarProperty Name="Title12" ColumnName="Title12" />
+                <ScalarProperty Name="LinkName11" ColumnName="LinkName11" />
+                <ScalarProperty Name="Title11" ColumnName="Title11" />
+                <ScalarProperty Name="LinkID" ColumnName="LinkID" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="Title1" ColumnName="Title1" />
+                <ScalarProperty Name="LinkName1" ColumnName="LinkName1" />
+                <ScalarProperty Name="Title2" ColumnName="Title2" />
+                <ScalarProperty Name="LinkName2" ColumnName="LinkName2" />
+                <ScalarProperty Name="Title3" ColumnName="Title3" />
+                <ScalarProperty Name="LinkName3" ColumnName="LinkName3" />
+                <ScalarProperty Name="Title4" ColumnName="Title4" />
+                <ScalarProperty Name="LinkName4" ColumnName="LinkName4" />
+                <ScalarProperty Name="Title5" ColumnName="Title5" />
+                <ScalarProperty Name="LinkName5" ColumnName="LinkName5" />
+                <ScalarProperty Name="Title6" ColumnName="Title6" />
+                <ScalarProperty Name="LinkName6" ColumnName="LinkName6" />
+                <ScalarProperty Name="Title7" ColumnName="Title7" />
+                <ScalarProperty Name="LinkName7" ColumnName="LinkName7" />
+                <ScalarProperty Name="Title8" ColumnName="Title8" />
+                <ScalarProperty Name="LinkName8" ColumnName="LinkName8" />
+                <ScalarProperty Name="Title9" ColumnName="Title9" />
+                <ScalarProperty Name="LinkName9" ColumnName="LinkName9" />
+                <ScalarProperty Name="Title10" ColumnName="Title10" />
+                <ScalarProperty Name="LinkName10" ColumnName="LinkName10" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="analytiics">
+            <EntityTypeMapping TypeName="CardModel.analytiic">
+              <MappingFragment StoreEntitySet="analytiics">
+                <ScalarProperty Name="count" ColumnName="count" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="area" ColumnName="area" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="ANAID" ColumnName="ANAID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CardInfoes">
+            <EntityTypeMapping TypeName="CardModel.CardInfo">
+              <MappingFragment StoreEntitySet="CardInfo">
+                <ScalarProperty Name="PersonBot" ColumnName="PersonBot" />
+                <ScalarProperty Name="CompanyBot" ColumnName="CompanyBot" />
+                <ScalarProperty Name="ActiveAccount" ColumnName="ActiveAccount" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+                <ScalarProperty Name="LandLineNumber" ColumnName="LandLineNumber" />
+                <ScalarProperty Name="YouTube" ColumnName="YouTube" />
+                <ScalarProperty Name="LinkedIn" ColumnName="LinkedIn" />
+                <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+                <ScalarProperty Name="Instagram" ColumnName="Instagram" />
+                <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+                <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="Bio" ColumnName="Bio" />
+                <ScalarProperty Name="Alias" ColumnName="Alias" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Introduction" ColumnName="Introduction" />
+                <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+                <ScalarProperty Name="Company_moto" ColumnName="Company_moto" />
+                <ScalarProperty Name="CompanyLogo" ColumnName="CompanyLogo" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="AddressLine" ColumnName="AddressLine" />
+                <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="DetailID" ColumnName="DetailID" />
+                <ScalarProperty Name="CardID" ColumnName="CardID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
